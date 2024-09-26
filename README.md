@@ -3,7 +3,7 @@ Un script simple para calcular costo de un viaje sin pegarme a valores que puede
 ## El script se llama calcular.py y se usa así
 Usa numeros reales para los datos y le asocia un texto con medidas con el siguente comando, reemplazando lo que esta entre "<>" y esos mismos "<>":
 ```bash
-./calcular.py -p <precio_de_combustible> "<divisa>" -d <distancia_a_recorrer> "<unidad_de_distancia>" --rend <distancia_sin_gastar> "<unidad_de_autonomia>" -t <tarifas> "<divisa>"
+./calcular.py -p <precio_de_combustible> "<divisa>" -d <distancia_a_recorrer> "<unidad_de_distancia>" --rend <distancia_sin_gastar> "<unidad_de_autonomia>" -t <tarifas> "<divisa>" >> costos.html
 ```
 ## Divisas aceptadas hasta el momento
 * ars, Pesos Argentinos
