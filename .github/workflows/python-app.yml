@@ -26,7 +26,7 @@ jobs:
         python-version: "3"
     - name: Otorgar Permisos
       run: |
-        chmod +x calcular.py
+        chmod +x ../../calcular.py
     - name: Probar script
       run: |
-       ./calcular.py -p 1199 "ars" -d 200 "km" --rend 5 "km por cada litro" -t 0 "ars" >> costos.html
+       ../../calcular.py -p 1199 "ars" -d 200 "km" --rend 5 "km por cada litro" -t 0 "ars" >> costos.html
