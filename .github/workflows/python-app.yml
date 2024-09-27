@@ -28,7 +28,7 @@ jobs:
         chmod +x ./calcular.py
     - name: Probar script
       run: |
-       ./calcular.py -p 1199 "ars" -d 637 "km" --rend 5 "km por cada litro" -t 0 "ars" >> costos.html
+       ./calcular.py -p 1200 "ars" -d 637 "km" --rend 5 "km por cada litro" -t 0 "ars" >> costos.html
     - name: VERIFICAR SALIDA
       run: |
-        cat costos.html && cp costos.html ../CombustiblePy
+        cat costos.html
