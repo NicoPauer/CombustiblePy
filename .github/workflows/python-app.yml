@@ -1,34 +1,39 @@
-# This workflow will install Python dependencies, run tests and lint with a single version of Python
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+# Este flujo de trabajo configura un entorno con la distro Linux Ubuntu, instala Python, ejecuta el script y muestra la salida
 
-name: Probador CombustiblePy
+# Para mas información ver: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
+# CONFIGURA NOMBRE DEL FLUJO DE TRABAJO
+name: Probador CombustiblePy [Versión Final]
+# DICE LISTA DE RAMAS PARA HACER PUSH Y PARA PULL REQUEST
 on:
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-
+# DICE QUE EL PERMISO QUE TIENE ES SOLO DR LECTURA
 permissions:
   contents: read
-
+# DICE LOS PROCESOS DEL FLUJO DE TRABAJO Y SUS PASOS
 jobs:
+# BAJO QUE SISTEMA SE CONSTRUYE: el último dr Ubuntu en este caso
   build:
 
     runs-on: ubuntu-latest
-
+# PASOS A REALIZAR
     steps:
+# Dice que dependencia usa y nombre del proceso
     - uses: actions/checkout@v4
-    - name: Set up Python 3
+    - name: Instalar Python 3
+# Dice que programa usar y que versión: interprete de Python v3 en este caso
       uses: actions/setup-python@v3
       with:
         python-version: "3"
+# Otorgo permisos para ejecutar script como programa
     - name: Otorgar Permisos
+# Ejecuto comando para ello
       run: |
         chmod +x ./calcular.py
-    - name: Probar script
+# Como puedo leer salida lo hago así porque esto se almacena en una cache temporal que se borra tras ejecutar
+    - name: Probar script 'calcular.py' en repositorio CombustiblePy
       run: |
-       ./calcular.py -p 1199 "ars" -d 100 "km" --rend 9.09 "km por cada litro" -t 0 "ars" >> costos.html
-    - name: VERIFICAR SALIDA
-      run: |
-        cat costos.html
+       ./calcular.py
