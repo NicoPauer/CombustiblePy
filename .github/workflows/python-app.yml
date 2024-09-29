@@ -36,4 +36,4 @@ jobs:
 # Como puedo leer salida lo hago así porque esto se almacena en una cache temporal que se borra tras ejecutar
     - name: Probar script 'calcular.py' en repositorio CombustiblePy
       run: |
-       ./calcular.py
+       ./calcular.py -p 1199 "ars" -d 200 "km" --rend 9.09 "km por cada litro" -t 0 "ars"
