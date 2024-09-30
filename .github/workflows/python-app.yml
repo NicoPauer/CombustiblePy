@@ -18,7 +18,7 @@ jobs:
 # BAJO QUE SISTEMA SE CONSTRUYE: el último dr Ubuntu en este caso
   build:
 
-    runs-on: android-latest
+    runs-on: ubuntu-latest
 # PASOS A REALIZAR
     steps:
 # Dice que dependencia usa y nombre del proceso
@@ -36,4 +36,4 @@ jobs:
 # Como puedo leer salida lo hago así porque esto se almacena en una cache temporal que se borra tras ejecutar
     - name: Probar script 'calcular.py' en repositorio CombustiblePy
       run: |
-       ./calcular.py -p 1199 "ars" -d 200 "km" --rend 9.09 "km por cada litro" -t 0 "ars"
+       ./calcular.py -p 0.00019000 "btc" -d 200 "km" --rend 9.09 "km por cada litro" -t 0.00045000 "btc"
