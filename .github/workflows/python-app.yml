@@ -18,7 +18,7 @@ jobs:
 # BAJO QUE SISTEMA SE CONSTRUYE: el último dr Ubuntu en este caso
   build:
 
-    runs-on: fedora-latest
+    runs-on: android-latest
 # PASOS A REALIZAR
     steps:
 # Dice que dependencia usa y nombre del proceso
