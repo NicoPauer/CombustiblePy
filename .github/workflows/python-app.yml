@@ -1,6 +1,6 @@
 # Este flujo de trabajo configura un entorno con la distro Linux Ubuntu, instala Python, ejecuta el script y muestra la salida
 
-# Para mas información ver: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+# Para mas información ver: https://docs.github.com/es/actions/automating-builds-and-tests/building-and-testing-python
 
 # CONFIGURA NOMBRE DEL FLUJO DE TRABAJO
 name: Probador CombustiblePy [Versión Final]
@@ -18,7 +18,7 @@ jobs:
 # BAJO QUE SISTEMA SE CONSTRUYE: el último dr Ubuntu en este caso
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: linuxmint-latest
 # PASOS A REALIZAR
     steps:
 # Dice que dependencia usa y nombre del proceso
